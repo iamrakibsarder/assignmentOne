@@ -40,10 +40,10 @@ post_data = [
 # Your Code Start from here
 
 for data in post_data:
-    slug = data.get('title').strip().lower().replace(' ', '-')
+    parts = data.get('title').split()[:3]
+    slug = '-'.join(parts).strip().lower()
     data['slug'] = slug
-    # print(data)
 
 # Your code ends here
 
-print(post_data[3])
+print(post_data[4])
